@@ -51,60 +51,60 @@
 
 <script>
 export default {
-  name: "HelloWorld",
-  data() {
-    return {
-      msg: "Welcome to Your Vue.js App"
-    };
-  }
+	name: "HelloWorld",
+	data() {
+		return {
+			msg: "Welcome to Your Vue.js App"
+		};
+	}
 };
 </script>
 
 <!--
 	Color scheme
 
-	yellow      #f8e9a1
-	coral       #f76c6c
-	light blue  #a8d0e6
-	blurple     #374785
-	navy blue   #24305e
+	yellow		#f8e9a1
+	coral		#f76c6c
+	light blue	#a8d0e6
+	blurple		#374785
+	navy blue	#24305e
 -->
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h1,
 h2 {
-  font-weight: normal;
+	font-weight: normal;
 }
 ul {
-  list-style-type: none;
-  padding: 0;
+	list-style-type: none;
+	padding: 0;
 }
 li {
-  display: inline-block;
-  margin: 0 10px;
+	display: inline-block;
+	margin: 0 10px;
 }
 a {
-  color: #42b983;
+	color: #42b983;
 }
 .sq {
-  margin: 8px;
-  height: 50px;
-  width: 50px;
-  border: 1px solid black;
+	margin: 8px;
+	height: 50px;
+	width: 50px;
+	border: 1px solid black;
 }
 .yellow {
-  background-color: #f8e9a1;
+	background-color: #f8e9a1;
 }
 .coral {
-  background-color: #f76c6c;
+	background-color: #f76c6c;
 }
 .light-blue {
-  background-color: #a8d0e6;
+	background-color: #a8d0e6;
 }
 .blurple {
-  background-color: #374785;
+	background-color: #374785;
 }
 .navy-blue {
-  background-color: #24305e;
+	background-color: #24305e;
 }
 </style>
