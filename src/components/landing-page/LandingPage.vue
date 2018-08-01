@@ -4,12 +4,8 @@
 			<hero></hero>
 		</div>
 		<div class="side-view">
-			<div class="side-top-view coral-background-color">
-				<resume></resume>
-			</div>
-			<div class="side-bottom-view navy-blue-background-color">
-				<demos></demos>
-			</div>
+			<resume></resume>
+			<demos></demos>
 		</div>
 	</div>
 </template>
@@ -28,7 +24,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../variables';
+@import '../../variables';
 
 .landing-page {
 	display: flex;
@@ -56,7 +52,7 @@ export default {
 }
 
 /* Super large styles (4k) */
-@media screen and (min-width: 1901px) {
+@media screen and (min-width: 2000px) {
 	* {
 		font-size: 32px;
 	}

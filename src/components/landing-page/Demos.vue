@@ -1,6 +1,12 @@
 <template>
-	<div class="demos">
+	<div class="demos side-bottom-view navy-blue-background-color">
 		My demos will go here
+
+		<!-- <img src="../assets/resume2.svg"> -->
+		<!-- <object data="../assets/resume2.svg" type="image/svg+xml">
+		</object> -->
+
+		
 	</div>
 </template>
 
