@@ -1,0 +1,17 @@
+@import './display-breakpoints';
+
+@mixin for($range) {
+	@if $range == phones-only {
+		@media (max-width: #{$phone - 1}) { @content; }
+	} @else if $range == phones-and-up {
+		@media (min-width: $phone) { @content; }
+	} @else if $range == tablets-small-and-up {
+		@media (min-width: $tablet-small) { @content; }
+	} @else if $range == tablets-large-and-up {
+		@media (min-width: $tablet-large) { @content; }
+	} @else if $range == desktops-and-up {
+		@media (min-width: $desktop) { @content; }
+	} @else if $range == 4k-and-up {
+		@media (min-width: $_4k) { @content }
+	}
+}

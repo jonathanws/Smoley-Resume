@@ -33,6 +33,9 @@ export default {
 
 /* Non-mobile styles */
 @media screen and (min-width: 768px) {
+	html, body {
+		overflow: hidden;
+	}
 	.landing-page {
 		display: flex;
 		flex-direction: row;
