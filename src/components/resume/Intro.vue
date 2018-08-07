@@ -32,11 +32,27 @@
 				</table>
 			</div>
 			<div class="actions">
-				<button><font-awesome-icon icon="coffee" /></button>
-				<button>two
-				</button>
-				<button>three
-				</button>
+				<!-- Change to download -->
+				<a href="https://docs.google.com/document/d/1MnfY7rHYEmYRqLu1E1YzOxC71NyGh7wc6wGypurm7X0/edit?usp=sharing" target="blank">
+					<button>
+						<font-awesome-icon :icon="['fab', 'google-drive']" size="lg"></font-awesome-icon>
+					</button>
+				</a>
+				<a href="https://www.linkedin.com/in/jon-smoley-1bb0b731" target="blank">
+					<button>
+						<font-awesome-icon :icon="['fab', 'linkedin-in']" size="lg"></font-awesome-icon>
+					</button>
+				</a>
+				<a href="https://github.com/jonathanws" target="blank">
+					<button>
+						<font-awesome-icon :icon="['fab', 'github-alt']" size="lg"></font-awesome-icon>
+					</button>
+				</a>
+				<a href="https://www.instagram.com/smoleypoleyoley/" target="blank">
+					<button>
+						<font-awesome-icon :icon="['fab', 'instagram']" size="lg"></font-awesome-icon>
+					</button>
+				</a>
 			</div>
 		</div>
 	</div>
@@ -86,17 +102,28 @@ export default {
 		.actions {
 			display: flex;
 			background-color: $accent-color;
-			button {
+			>a,
+			>button {
+				$change: 360px;
+				$num-buttons: 4;
+
 				flex-grow: 1;
-				background-color: $accent-color;
-				border: 0;
+				height: $change / $num-buttons;
+			}
+			button {
+				padding: 0;
 				color: white;
-				padding: 24px;
+				border: 0;
 				outline: 0;
+				background-color: $accent-color;
 				&:hover {
 					background-color: lighten($accent-color, 10%);
 					cursor: pointer;
 				}
+			}
+			>a button {
+				width: 100%;
+				height: 100%;
 			}
 		}
 	}

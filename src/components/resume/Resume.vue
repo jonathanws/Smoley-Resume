@@ -12,7 +12,26 @@
 
 				<Intro></Intro>
 
-				<h1 style="border: 4px solid cyan;"> even more stuff</h1>
+				<h3>SKILLS</h3>
+
+				<Skills></Skills>
+
+				<h3>EDUCATION</h3>
+
+				<Education></Education>
+
+				<p>what</p>
+				<p>what</p>
+				<p>what</p>
+				<p>what</p>
+				<p>what</p>
+				<p>what</p>
+				<p>what</p>
+				<p>what</p>
+				<p>what</p>
+				<p>what</p>
+				<p>what</p>
+				<p>what</p>
 				<p>what</p>
 				<p>what</p>
 				<p>what</p>
@@ -61,15 +80,16 @@ Work Experience -->
 </template>
 
 <script>
+import Education from './Education.vue';
 import Experience from './Experience.vue';
 import Header from '../common/Header.vue';
 import Intro from './Intro.vue';
+import Skills from './Skills.vue';
 
 export default {
 	components: {
-		Experience, Header, Intro
-	},
-	name: 'Resume'
+		Education, Experience, Header, Intro, Skills
+	}
 }
 </script>
 
@@ -100,8 +120,10 @@ $aligned-container-multiplier: 1;
 					color: white;
 				}
 			}
-			.intro {
-				// height: $hero-height;
+			h3 {
+				text-align: center;
+				margin: 48px 0;
+				color: $accent-color;
 			}
 		}
 
