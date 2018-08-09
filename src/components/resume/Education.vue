@@ -33,13 +33,13 @@ export default {
 					degree: 'Bachelor of Science in Computer Science',
 					dates: '2010-2014',
 					description: 'Towson University Marching Band -- Drumline\nWorked for university\'s Mobile Development team'
-					},
+				},
 				{
 					asset: require('../../assets/education-davisandelkins.png'),
 					name: 'Davis & Elkins College',
 					dates: '2009-2010',
 					description: 'Davis and Elkins Alpine Ski Racing Team, Student Assembly Representative, IT desk assistant'
-					},
+				},
 				{ asset: require('../../assets/education-frederickcommunity.jpg'), name: 'Frederick Community College' }
 			]
 		}
@@ -57,6 +57,8 @@ $padding: 8px;
 	.school {
 		display: flex;
 		margin-bottom: 16px;
+		background-color: white;
+		border-top: 4px solid $accent-color;
 		&.active {
 			.school-icon {
 				flex-basis: ($img-size - ($padding * 2)) * 2;
@@ -74,7 +76,6 @@ $padding: 8px;
 			align-items: center;
 			height: $img-size - ($padding * 2);
 			padding: $padding;
-			background-color: white;
 			img {
 				max-height: $img-size - ($padding * 2);
 				max-width: $img-size - ($padding * 2);
@@ -82,8 +83,9 @@ $padding: 8px;
 		}
 		.details {
 			flex-grow: 1;
-			margin-left: 10px;
-			margin-right: 10px;
+			margin: ($padding * 2) $padding;
+			padding-left: $padding * 2;
+			border-left: 2px solid $accent-color;
 			.name-and-dates {
 				display: flex;
 				align-items: center;
@@ -98,7 +100,7 @@ $padding: 8px;
 			.degree {
 				color: $accent-color;
 			}
-			p {
+			h4, h5, p {
 				margin-top: 0;
 			}
 		}

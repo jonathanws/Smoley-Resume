@@ -20,23 +20,6 @@
 
 				<Education></Education>
 
-				<p>what</p>
-				<p>what</p>
-				<p>what</p>
-				<p>what</p>
-				<p>what</p>
-				<p>what</p>
-				<p>what</p>
-				<p>what</p>
-				<p>what</p>
-				<p>what</p>
-				<p>what</p>
-				<p>what</p>
-				<p>what</p>
-				<p>what</p>
-				<p>what</p>
-				<p>what</p>
-
 			</div>
 		</div>
 
@@ -76,19 +59,22 @@ Phone: 301-788-9936 | E-mail: jonathanws18@gmail.com | 611 South Charles Street,
 Clearance: Active Top Secret / Sensitive Compartmented Information
 Work Experience -->
 
+		<Footer color="coral-background-color" height="250px"></Footer>
+
 	</div>
 </template>
 
 <script>
 import Education from './Education.vue';
 import Experience from './Experience.vue';
+import Footer from '../common/Footer.vue';
 import Header from '../common/Header.vue';
 import Intro from './Intro.vue';
 import Skills from './Skills.vue';
 
 export default {
 	components: {
-		Education, Experience, Header, Intro, Skills
+		Education, Experience, Footer, Header, Intro, Skills
 	}
 }
 </script>
@@ -103,13 +89,13 @@ $hero-height: 250px;
 $aligned-container-multiplier: 1;
 
 .resume {
+	background-color: #eee;
 	.hero-banner {
 		background-color: $accent-color;
 	}
 	.container {
 		display: flex;
 		justify-content: center;
-		background-color: #eee;
 		.aligned-container {
 			.name-and-stuff {
 				display: flex;
