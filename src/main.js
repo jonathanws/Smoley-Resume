@@ -11,6 +11,9 @@ import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
+import 'font-proxima-nova/fonts/ProximaNova-Regular.ttf'
+import 'font-proxima-nova/style.css'
+
 library.add(faGithubAlt, faGoogleDrive, faInstagram, faLinkedinIn)
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
