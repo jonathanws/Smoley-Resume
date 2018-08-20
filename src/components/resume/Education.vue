@@ -3,7 +3,7 @@
 
 		<div v-for="(school, index) in schools" v-bind:key="school.name" :class="index == 0 ? 'active' : ''" class="school box-shadow">
 			<div class="school-icon">
-				<img :src="school.asset">
+				<img v-if="school.asset" :src="school.asset">
 			</div>
 			<div class="details">
 				<div class="name-and-dates" style="display: flex; align-items: center;">
@@ -40,7 +40,18 @@ export default {
 					dates: '2009-2010',
 					description: 'Davis and Elkins Alpine Ski Racing Team, Student Assembly Representative, IT desk assistant'
 				},
-				{ asset: require('../../assets/education-frederickcommunity.jpg'), name: 'Frederick Community College' }
+				{
+					asset: '',
+					name: 'Montgomery Community College',
+					dates: '3/15 - 6/15',
+					description: 'Bootstrap for Mobile Web certificate'
+				},
+				{
+					asset: require('../../assets/education-frederickcommunity.jpg'),
+					name: 'Frederick Community College',
+					dates: '6/10 - 9/10',
+					description: 'LAN Design and Management'
+				}
 			]
 		}
 	}
