@@ -33,24 +33,29 @@
 			</div>
 			<div class="actions">
 				<!-- Change to download -->
-				<a href="https://docs.google.com/document/d/1MnfY7rHYEmYRqLu1E1YzOxC71NyGh7wc6wGypurm7X0/edit?usp=sharing" target="blank">
+				<a href="https://docs.google.com/document/d/1MnfY7rHYEmYRqLu1E1YzOxC71NyGh7wc6wGypurm7X0/edit?usp=sharing" target="_blank">
 					<button>
 						<font-awesome-icon :icon="['fab', 'google-drive']" size="lg"></font-awesome-icon>
 					</button>
 				</a>
-				<a href="https://www.linkedin.com/in/jon-smoley-1bb0b731" target="blank">
+				<a href="https://www.linkedin.com/in/jon-smoley-1bb0b731" target="_blank">
 					<button>
 						<font-awesome-icon :icon="['fab', 'linkedin-in']" size="lg"></font-awesome-icon>
 					</button>
 				</a>
-				<a href="https://github.com/jonathanws" target="blank">
+				<a href="https://github.com/jonathanws" target="_blank">
 					<button>
 						<font-awesome-icon :icon="['fab', 'github-alt']" size="lg"></font-awesome-icon>
 					</button>
 				</a>
-				<a href="https://www.instagram.com/smoleypoleyoley/" target="blank">
+				<a href="https://www.instagram.com/smoleypoleyoley/" target="_blank">
 					<button>
 						<font-awesome-icon :icon="['fab', 'instagram']" size="lg"></font-awesome-icon>
+					</button>
+				</a>
+				<a href="https://twitter.com/SmoleyPoleyOley" target="_blank">
+					<button>
+						<font-awesome-icon :icon="['fab', 'twitter']" size="lg"></font-awesome-icon>
 					</button>
 				</a>
 			</div>
@@ -82,13 +87,17 @@ export default {
 			padding: 20px 15px;
 			color: #333;
 			h2, h5 {
-				font-weight: 100;
-				margin: 0;
+				font-weight: 400;
+				span {
+					font-weight: 600;
+					color: $accent-color;
+				}
 			}
-			h2 span,
-			h5 span {
-				color: $accent-color;
-				font-weight: 600;
+			h2 {
+				margin: 0 0 4px 0;
+			}
+			h5 {
+				margin: 4px 0;
 			}
 			hr {
 				margin: 10px 30px;
@@ -96,7 +105,13 @@ export default {
 				border-bottom: 0;
 			}
 			table {
-				font-size: 12px;
+				font-size: 14px;
+				td {
+					padding: 4px;
+				}
+				td:first-child {
+					font-weight: 600;
+				}
 			}
 		}
 		.actions {
@@ -105,7 +120,7 @@ export default {
 			>a,
 			>button {
 				$change: 360px;
-				$num-buttons: 4;
+				$num-buttons: 5;
 
 				flex-grow: 1;
 				height: $change / $num-buttons;

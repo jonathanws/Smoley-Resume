@@ -13,11 +13,9 @@
 				<Intro></Intro>
 
 				<h3>SKILLS</h3>
-
 				<Skills></Skills>
 
 				<h3>EDUCATION</h3>
-
 				<Education></Education>
 
 			</div>

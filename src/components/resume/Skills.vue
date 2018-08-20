@@ -5,13 +5,14 @@
 		</div>
 
 		<div>
-			<Skill v-for="s in skills" v-bind:key="s.name" :name="s.name" :length="s.length" :percentage="s.percentage"></Skill>
+			<Skill v-for="s in skills" v-bind:key="s.name" :name="s.name" :length="getLength(s.length)" :percentage="s.percentage"></Skill>
 		</div>
 	</div>
 </template>
 
 <script>
 import Skill from './Skill.vue';
+import moment, { months } from 'moment';
 
 export default {
 	components: {
@@ -20,13 +21,49 @@ export default {
 	data: function() {
 		return {
 			skills: [
-				{ name: 'Javascript', length: '1 year', percentage: '70' },
-				{ name: 'Angular.js', length: '1 year', percentage: '100' },
-				{ name: 'Node.js', length: '1 year', percentage: '20' },
-				{ name: 'Linux', length: '1 year', percentage: '85' },
-				{ name: 'Full-Stack development', length: '1 year', percentage: '100' }
+				{ name: 'Javascript', length: [2017, 8, 1] },
+				{ name: 'Angular.js', length: [2017, 8, 1] },
+				{ name: 'Node.js', length: [2017, 8, 1] },
+				{ name: 'Linux', length: [2013, 6, 1] },
+				{ name: 'Full-Stack', length: [2014, 8, 1] }
 			]
 		}
+	},
+	created: function() {
+		var maxMonths;
+		var skill;
+
+		for (skill of this.skills) {
+			skill.numMonths = moment().diff(moment(skill.length), 'months');
+			
+			if (maxMonths === undefined || skill.numMonths > maxMonths) {
+				maxMonths = skill.numMonths;
+			}
+		}
+
+		for (skill of this.skills) {
+			skill.percentage = skill.numMonths / maxMonths * 100;
+		}
+	},
+	methods: {
+		getLength(m) {
+			var diff = '';
+			var numMonths = moment().diff(moment(m), 'months');
+
+			if (numMonths > 11) {
+				var numYears = Math.floor(numMonths / 12);
+				diff = numYears + (numYears > 1 ? ' years' : ' year');
+
+				var extraMonths = numMonths % 12;
+				if (extraMonths > 0) {
+					diff += ', ' + extraMonths + ' ' + (extraMonths > 1 ? 'months' : 'month');
+				}
+			} else {
+				diff += numMonths + ' ' + (numMonths > 1 ? ' months' : ' month');
+			}
+
+			return diff;
+		},
 	}
 }
 </script>
